@@ -19,8 +19,8 @@ import java.util.Scanner; import java.util.ArrayList;
 public class Problem1 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        ArrayList<String> names = new ArrayList<String>();
-        ArrayList<Integer> grades = new ArrayList<Integer>();
+        ArrayList<String> names = new ArrayList<>();
+        ArrayList<Integer> grades = new ArrayList<>();
         int grade;
         String name;
         int classesEntered = 0;
@@ -69,5 +69,3 @@ public class Problem1 {
         System.out.printf("%.2f%% of students passed the exam", ((passedExam / (double) classesEntered) * 100));
         }
     }
-
-
