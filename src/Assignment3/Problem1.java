@@ -2,7 +2,7 @@
     Class: CSET 1200
     Instructor: Dr. Jared Oluoch
     Programming Assignment: Assignment 3 Problem 1
-    Date: 9/8/20
+    Date: 9/9/20
     Summary: This program takes the input of students' names and grades, then outputs their grades as well as
         information on who passed
 
@@ -19,53 +19,51 @@ import java.util.Scanner; import java.util.ArrayList;
 public class Problem1 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        ArrayList<String> names = new ArrayList<>();
-        ArrayList<Integer> grades = new ArrayList<>();
-        int grade;
-        String name;
+        ArrayList<String> students = new ArrayList<String>();
+        ArrayList<ArrayList<Integer>> grades = new ArrayList<ArrayList<Integer>>();
         int classesEntered = 0;
+        int grade = -2;
+        String name;
 
         do {
-            grade = -1;
-            System.out.print("Enter name (or enter '-1' to end): ");
+            System.out.print("Enter name (or '-1' to end): ");
             name = input.nextLine();
-            if (name.equals("-1") && classesEntered < 5) {
-                System.out.println("Please enter at least 5 grades");
-                name = "";
-                continue;
+            if (!(name.equals("-1"))) {
+                students.add(name);
             }
-            else if (name.equals("-1"))
-                continue;
 
-            names.add(name);
-
-            while (grade < 0 || grade > 100) {
-                System.out.print("Enter grade: ");
+            while (grade != -1 && !(name.equals("-1"))) {
+                if (classesEntered == 0) {
+                    grades.add(new ArrayList<Integer>());
+                }
+                System.out.print("\tEnter grade: ");
                 grade = input.nextInt();
                 input.nextLine();
-                if (grade >= 0 && grade <= 100)
-                    grades.add(grade);
-                else
+                if (grade == -1 && classesEntered < 5) {
+                    System.out.println("Please enter at least 5 grades");
+                    grade = -2;
+                }
+                if (grade >= 0 && grade <= 100) {
+                    grades.get(students.size() - 1).add(classesEntered, grade);
+                    classesEntered++;
+                }
+                if (grade < -2 || grade > 100) {
                     System.out.println("Please enter a grade between 0 and 100");
+                }
             }
-            classesEntered++;
-
+            grade = -2;
+            classesEntered = 0;
 
         } while (!(name.equals("-1")));
 
-        int passedExam = 0;
-        for (int i = 0; i < classesEntered; i++) {
-            if (grades.get(i) >= 75)
-                passedExam++;
-            }
-
         System.out.println("\n\tGRADES");
-        for (int i = 0; i < classesEntered; i++) {
-            System.out.println(names.get(i) + ": " + grades.get(i));
+        for (int i = 0; i < students.size(); i++) {
+            System.out.print(students.get(i) + ": ");
+            for (int j = 0; j < grades.get(i).size(); j++) {
+                System.out.print(grades.get(i).get(j) + " ");
+            }
+            System.out.println();
         }
 
-        System.out.println("\n" + passedExam + " students passed the exam");
-
-        System.out.printf("%.2f%% of students passed the exam", ((passedExam / (double) classesEntered) * 100));
         }
     }
