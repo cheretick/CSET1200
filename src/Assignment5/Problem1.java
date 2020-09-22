@@ -35,7 +35,12 @@ public class Problem1 {
                     lcm = xMultiples.get(j);
                     haveLCM = true;
                 }
+                if (xMultiples.contains(yMultiples.get(j))) {
+                    lcm = yMultiples.get(j);
+                    haveLCM = true;
+                }
             }
+            System.out.println(i);
             i++;
         }
         System.out.printf("The least common multiple between %,d and %,d is %,d", x, y, lcm);
