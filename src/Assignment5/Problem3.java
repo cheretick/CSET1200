@@ -27,12 +27,11 @@ public class Problem3 {
         double thirdSide = input.nextDouble();
 
         ThisTriangle thisTriangle = new ThisTriangle(firstSide, secondSide, thirdSide);
-        if (thisTriangle.isValid()) {
+        if (thisTriangle.isValid())
             System.out.printf("The area of this triangle is %.2f", thisTriangle.area());
-        }
-        else {
+        else
             System.out.println("This triangle is not valid");
-        }
+
     }
 
     public static class ThisTriangle {

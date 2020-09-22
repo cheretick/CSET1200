@@ -28,7 +28,6 @@ public class Problem2 {
         showDecreasingOrder(n1, n2, n3);
     }
 
-
     public static void showDecreasingOrder(double n1, double n2, double n3) {
         double temp;
         if (n3 > n2) {
