@@ -12,9 +12,7 @@ or TA for this course. I understand that getting outside help from this course
 other than from the instructor or TA will result in a grade of 0 in this
 assignment and other disciplinary actions for academic dishonesty. */
 
-package Assignment6;
-
-import java.util.Scanner;
+package Assignment6; import java.util.Scanner;
 
 public class Problem1 {
     public static void main(String[] args) {
