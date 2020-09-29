@@ -17,24 +17,58 @@ public class Problem2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int[] numbers = {3, 6, 7, 8, 12, 15, 22, 36, 45, 48, 49, 52, 65, 70, 73, 88, 94};
+        BinarySearch binarySearch1 = new BinarySearch(numbers);
         System.out.print("Enter a value to search for: ");
         int value = input.nextInt();
+        binarySearch1.binarySearch(value);
+        if (binarySearch1.isValueFound())
+            System.out.println("This value exits in the array at index " + binarySearch1.getIndex());
+        else
+            System.out.println("This value does not exist within the array");
 
     }
 
-    public static int binarySearch(int[] numbers, int value) {
-        int low = 0;
-        int mid = numbers.length / 2;
-        int high = numbers.length - 1;
-        boolean valueFound = false;
-        while (!valueFound) {
-            if (value == mid) {
-                // left off here after realizing that I want to return two values...
-                // maybe create a class for the method?
-            }
-            if (value < mid) {
 
+
+    static class BinarySearch {
+        static int [] numbers;
+        static int index = 0;
+        static boolean valueFound = false;
+
+        BinarySearch(int[] numbers) {
+            this.numbers = numbers;
+        }
+
+        public int getIndex() {
+            return index;
+        }
+
+        public boolean isValueFound() {
+            return valueFound;
+        }
+
+        public static void binarySearch(int value) {
+            int low = 0;
+            int mid = numbers.length / 2;
+            int high = numbers.length - 1;
+            while (!valueFound) {
+                if (value == numbers[mid]) {
+                    valueFound = true;
+                    index = mid;
+                }
+                else if (low == high){
+                    break;
+                }
+                else if (value < numbers[mid]) {
+                    high = mid;
+                    mid = (low + high) / 2;
+                }
+                else if (value > numbers[mid]) {
+                    low = mid + 1;
+                    mid = (low + high) / 2;
+                }
             }
         }
+
     }
 }
