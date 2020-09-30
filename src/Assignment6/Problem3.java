@@ -27,6 +27,7 @@ public class Problem3 {
 
         System.out.print("Array Elements: ");
         for (int number : arr) System.out.print(number + " ");
+
         for (int number : arr)
             if (number < minValue)
                 minValue = number;
