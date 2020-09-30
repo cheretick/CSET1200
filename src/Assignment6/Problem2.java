@@ -1,9 +1,9 @@
 /* Name: Collin Heretick
     Class: CSET 1200
     Instructor: Dr. Jared Oluoch
-    Programming Assignment: Assignment 6, Problem 1
+    Programming Assignment: Assignment 6, Problem 2
     Date: 9/29/20
-    Summary:
+    Summary: This program uses a binary search method to find the index of a user-entered number
 
 This code is my own work. I did not get any help from any online source
 such as chegg.com; from a classmate, or any other person other than the instructor
@@ -20,7 +20,7 @@ public class Problem2 {
         BinarySearch binarySearch1 = new BinarySearch(numbers);
         System.out.print("Enter a value to search for: ");
         int value = input.nextInt();
-        binarySearch1.binarySearch(value);
+        BinarySearch.binarySearch(value);
         if (binarySearch1.isValueFound())
             System.out.println("This value exits in the array at index " + binarySearch1.getIndex());
         else
@@ -28,15 +28,13 @@ public class Problem2 {
 
     }
 
-
-
     static class BinarySearch {
         static int [] numbers;
         static int index = 0;
         static boolean valueFound = false;
 
         BinarySearch(int[] numbers) {
-            this.numbers = numbers;
+            BinarySearch.numbers = numbers;
         }
 
         public int getIndex() {
@@ -69,6 +67,5 @@ public class Problem2 {
                 }
             }
         }
-
     }
 }
