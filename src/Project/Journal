@@ -1,0 +1,16 @@
+9/30
+    - Started working on the project.
+
+    - Proposed Data Structure of Array: arr[5][10]
+        {{Prof1Year1$$, Prof1Year2$$, Prof1Year3$$, ..., Prof1Year10$$},
+         {Prof2Year1$$, Prof2Year2$$, Prof2Year3$$, ..., Prof2Year10$$},
+         ...
+         {Prof5Year1$$, Prof5Year2$$, Prof5Year3$$, ..., Prof5Year10$$}}
+
+    - Made dummy main method, consisting of undefined methods.
+
+    - Created a ProfessorsSalaries class, consisting of a constructor method which populates an array using
+        parameters for its two dimension sizes, the number of professors and the number of years. The constructor then
+        populates the array with random amounts representing salaries between $50,000 and $500,000.
+
+    - Implemented a method to print the data in the array.
