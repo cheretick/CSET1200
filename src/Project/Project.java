@@ -2,7 +2,7 @@
     Class: CSET 1200
     Instructor: Dr. Jared Oluoch
     Programming Assignment: Course Project
-    Date: MMDDYY - DON'T FORGET TO ENTER THE DATE WHEN YOU FINISH THE PROGRAM!!
+    Date: 10/01/20
     Summary: This program implements a class which creates an array representing the annual salaries for five of
         UT's CSET professors over the past ten years, where the first dimension holds the professors' names and the
         second dimension holds their randomly generated salaries.
@@ -40,6 +40,9 @@ public class Project {
         // This method returns the total amount of money earned by all five professors over ten years
         System.out.printf("The total amount of money made by all of the professors, over ten years, is $%,.2f",
                 professorsSalaries.total());
+
+        // This method prints each professor's total pay
+        //professorsSalaries.professorsSalaryTotals();
 
     }
 }

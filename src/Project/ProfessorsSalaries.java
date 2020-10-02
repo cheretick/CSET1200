@@ -89,4 +89,16 @@ public class ProfessorsSalaries {
         }
         return total;
     }
+
+    // This method prints the total salaries of each professor
+    void professorsSalaryTotals() {
+        double total = 0;
+        for (int i = 0; i < numberOfProfessors; i++) {
+            for (int j = 0; j < numberOfYears; j++) {
+                total += arr[i][j];
+            }
+            System.out.printf("\nProfessor %d made a total of $%,.2f", (i + 1), total);
+            total = 0;
+        }
+    }
 }
