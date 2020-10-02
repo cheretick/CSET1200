@@ -1,6 +1,8 @@
 9/30
     - Started working on the project.
 
+    - Added project to my GitHub repository (better safe than sorry)
+
     - Proposed Data Structure of Array: arr[5][10]
         {{Prof1Year1$$, Prof1Year2$$, Prof1Year3$$, ..., Prof1Year10$$},
          {Prof2Year1$$, Prof2Year2$$, Prof2Year3$$, ..., Prof2Year10$$},
@@ -14,3 +16,22 @@
         populates the array with random amounts representing salaries between $50,000 and $500,000.
 
     - Implemented a method to print the data in the array.
+
+10/1
+    - Defined the method lowestSalary that returns the index of the professor with the lowest total salary
+
+    - Defined the average method that returns the average salary made by all of the professors over ten years
+
+    - I just realized that my print function is only returning the salaries made in the first five years..
+        - Debugging:
+        - Double checked that my constructor is indeed populating all ten years with random salaries
+        - Realized that my constructor contained "this.numberOfYears = numberOfProfessors;"
+            instead of "this.numberOfYears = numberOfYears;"
+        - replacing numberOfProfessors with numberOfYears did in fact fix the issue
+
+    - Defined the lowestSalaryYear method that returns the year in which the lowest single salary was earned
+
+    - I realized that my lowestSalary method already calculated the total amount of money, which is what I needed for
+        my total method, except that it divided the total by the number of professors before returning the value.
+        The only thing I needed to do to define the total method was to copy the lowestSalary method and return the
+        total, without dividing it by the number of professors.

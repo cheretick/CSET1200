@@ -24,16 +24,22 @@ public class Project {
         professorsSalaries.print();
 
         // This method returns the index of the professor who made the lowest salary over ten years
-        //professorsSalaries.lowestSalary();
+        System.out.println("The index of the professor that made the lowest salary over ten years is index "
+                + professorsSalaries.lowestSalary()+ " which represents Professor "
+                + (professorsSalaries.lowestSalary() + 1));
+
 
         // This method returns the average salary made by all professors over ten years
-        //professorsSalaries.average();
+        System.out.printf("The average salary made by all of the professors over ten years is $%,.2f\n",
+                professorsSalaries.average());
 
         // This method returns the year in which the lowest salary was earned
-        //professorsSalaries.lowestSalaryYear();
+        System.out.println("The year in which the lowest salary was earned was year "
+                + professorsSalaries.lowestSalaryYear());
 
         // This method returns the total amount of money earned by all five professors over ten years
-        //professorsSalaries.total();
+        System.out.printf("The total amount of money made by all of the professors, over ten years, is $%,.2f",
+                professorsSalaries.total());
 
     }
 }
