@@ -43,7 +43,6 @@ public class Project {
 
         // This method prints each professor's total pay
         //professorsSalaries.professorsSalaryTotals();
-
     }
 }
 

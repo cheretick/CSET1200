@@ -90,7 +90,7 @@ public class ProfessorsSalaries {
         return total;
     }
 
-    // This method prints the total salaries of each professor
+    // This method prints the total salaries of each professor (used for verifying the other calculations)
     void professorsSalaryTotals() {
         double total = 0;
         for (int i = 0; i < numberOfProfessors; i++) {
