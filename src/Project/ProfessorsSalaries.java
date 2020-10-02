@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class ProfessorsSalaries {
     Random rand = new Random();
-    double[][] arr;
+    double[][] arr; // This array holds the values representing each professors yearly salaries
     int numberOfProfessors;
     int numberOfYears;
 
@@ -16,6 +16,7 @@ public class ProfessorsSalaries {
         this.numberOfYears = numberOfYears;
         for (int i = 0; i < numberOfProfessors; i++) {
             for (int j = 0; j < numberOfYears; j++) {
+                // Generates and assigns an amount between $50,000 and $500,000
                 arr[i][j] = (double) (rand.nextInt(450_000_00) + 50_000_00) / 100;
             }
         }
@@ -38,6 +39,7 @@ public class ProfessorsSalaries {
         // The currentTotal variable temporarily holds a running tally, used to calculate each professors total salary
         double currentTotal = 0;
         int lowestIndex = 0;
+        // This loop adds all of a professors yearly salaries to a running total then checks if that total is the lowest
         for (int i = 0; i < numberOfProfessors; i++) {
             for (int j = 0; j < numberOfYears; j++) {
                 currentTotal += arr[i][j];
@@ -46,7 +48,7 @@ public class ProfessorsSalaries {
                 lowest = currentTotal;
                 lowestIndex = i;
             }
-            currentTotal = 0;
+            currentTotal = 0; // Resets the running total, before moving on to the next professor
         }
         return lowestIndex;
     }
@@ -66,16 +68,17 @@ public class ProfessorsSalaries {
     // This method returns the year in which the lowest single salary was earned
     int lowestSalaryYear() {
         double lowestSalary = 500_001; // This value ensures that the starting lowest salary is out of range
-        int lowestSalaryYear = 0;
+        int lowestSalaryYearIndex = 0;
+        // This loop goes through every salary, retaining the value and the index of the year of the lowest salary
         for (int i = 0; i < numberOfProfessors; i++) {
             for (int j = 0; j < numberOfYears; j++) {
                 if (arr[i][j] < lowestSalary) {
                     lowestSalary = arr[i][j];
-                    lowestSalaryYear = j;
+                    lowestSalaryYearIndex = j;
                 }
             }
         }
-        return lowestSalaryYear + 1;
+        return lowestSalaryYearIndex + 1; // Adds one to the index of the year to represent the actual year
     }
 
     // This method returns the total amount of money earned by all of the professors over all ten years
