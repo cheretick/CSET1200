@@ -1,3 +1,17 @@
+/* Name: Collin Heretick
+    Class: CSET 1200
+    Instructor: Dr. Jared Oluoch
+    Programming Assignment: Assignment 9, Problem 1
+    Date: 11/4/20
+    Summary: This program explores the concepts of inheritance, using a "BankAccount" super class and two sub classes,
+        "CheckingsAccount" and "SavingsAccount"
+
+This code is my own work. I did not get any help from any online source
+such as chegg.com; from a classmate, or any other person other than the instructor
+or TA for this course. I understand that getting outside help from this course
+other than from the instructor or TA will result in a grade of 0 in this
+assignment and other disciplinary actions for academic dishonesty. */
+
 package Assignment9;
 import java.text.NumberFormat;
 import java.util.Locale;
