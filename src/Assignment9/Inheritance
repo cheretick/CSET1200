@@ -1,0 +1,38 @@
+INHERITANCE EXAMPLE
+
+Super Class/Parent Class: Animal
+    properties:
+        size
+        shape
+        color
+        speed
+        gender
+        diet
+
+    methods:
+        move()
+        sleep()
+        eat()
+
+Sub Class/Child Class: House Cat (extends Animal)
+    properties:
+        hair length
+        name
+        veterinarian
+
+    methods:
+        purr()
+        play()
+        chaseMouse()
+
+Sub Class/Child Class: Fish (extends Animal)
+    Properties:
+        lives in freshwater
+        is a good house pet
+        name
+        is territorial
+
+    methods:
+        swim()
+        float()
+
