@@ -25,8 +25,8 @@ public class Problem1 {
                 num1, num2, greatestCommonDivisor(num1, num2));
     }
 
-    // This function uses a math trick for finding the gcd in which the smaller number is subtracted from the larger
-    // number, until the two numbers are equal, which is the gcd
+    /* This function uses a math trick for finding the gcd in which the smaller number is subtracted from the larger
+       number, until the two numbers are equal, which is the gcd */
     public static int greatestCommonDivisor(int num1, int num2) {
         if (num1 == num2) { // Base Case
             return num1;
