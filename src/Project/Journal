@@ -31,7 +31,7 @@
 
     - Defined the lowestSalaryYear method that returns the year in which the lowest single salary was earned
 
-    - I realized that my lowestSalary method already calculated the total amount of money, which is what I needed for
+    - I realized that my average method already calculated the total amount of money, which is what I needed for
         my total method, except that it divided the total by the number of professors before returning the value.
         The only thing I needed to do to define the total method was to copy the lowestSalary method and return the
         total, without dividing it by the number of professors.
